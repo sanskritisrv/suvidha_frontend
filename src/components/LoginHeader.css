@@ -1,0 +1,57 @@
+.login-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #222831;
+  padding: 10px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.login-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-box {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.login-header-logo {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.login-header-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.foundation-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #f2b705;
+  letter-spacing: 2px;
+}
+
+.mandal-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #f2b705;
+  letter-spacing: 1.5px;
+}
+
+.tagline {
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 1.5px;
+}
