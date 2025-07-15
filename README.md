@@ -20,6 +20,7 @@ This is the frontend application for the Suvidha Foundation TPO (Training & Plac
   - Welcome message on successful login
   - Display last 10 TPO entries in a responsive, searchable, and paginated table
   - Logout functionality
+  - Edit and Delete options for TPO entries with confirmation pop-ups
 
 - **Add TPO Details**
   - Modal popup form to add new TPO details without page refresh
@@ -29,10 +30,14 @@ This is the frontend application for the Suvidha Foundation TPO (Training & Plac
 - **Search & Filter**
   - Search bar to filter TPO records by name, college, or email
 
+- **Additional Pages**
+  - About page with foundation information accessible from sidebar menu
+  - Profile and Contact pages with active page indicator bars below navbar
+
 ## Project Structure
 
 - `src/`
-  - `components/` - React components including Login, Dashboard, TpoTable, AddTpoModal, LoginHeader
+  - `components/` - React components including Login, Dashboard, TpoTable, AddTpoModal, LoginHeader, About, Profile, Contact
   - `App.js` - Main app component with routing and authentication state
   - `index.js` - React entry point
   - `App.css` - Global styles
