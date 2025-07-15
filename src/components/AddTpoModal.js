@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 function AddTpoModal({ onClose, onAdd }) {
   const [formData, setFormData] = useState({
@@ -14,19 +15,25 @@ function AddTpoModal({ onClose, onAdd }) {
     const newErrors = {};
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
+      toast.error('Name is required');
     }
     if (!formData.college.trim()) {
       newErrors.college = 'College name is required';
+      toast.error('College name is required');
     }
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
+      toast.error('Email is required');
     } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
       newErrors.email = 'Invalid email format';
+      toast.error('Invalid email format');
     }
     if (!formData.contact_no.trim()) {
       newErrors.contact_no = 'Contact number is required';
+      toast.error('Contact number is required');
     } else if (!/^\d{10,15}$/.test(formData.contact_no)) {
       newErrors.contact_no = 'Contact number must be 10 to 15 digits';
+      toast.error('Contact number must be 10 to 15 digits');
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -44,9 +51,11 @@ function AddTpoModal({ onClose, onAdd }) {
     if (validate()) {
       const newTpo = {
         id: Date.now(),
+        created_at: new Date().toISOString(),
         ...formData,
       };
       onAdd(newTpo);
+      toast.success('TPO Added Successfully');
       onClose();
     }
   };
